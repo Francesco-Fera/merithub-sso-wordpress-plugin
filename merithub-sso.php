@@ -22,7 +22,7 @@ function merithub_sso_button_shortcode($atts) {
     $encoded_user_info = base64url_encode($token_generated);
 
     // Prepare the URL for redirection
-    $redirect_url = 'https://merithub.com/sso/c6qt82qckrg1fb7vf1k0?token=' . $encoded_user_info;
+    $redirect_url = 'https://merithub.com/sso/{MerithubClientID}?token=' . $encoded_user_info;
 
     // Prepare the HTML based on display type
     if ($atts['type'] === 'button') {
